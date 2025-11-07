@@ -82,7 +82,7 @@ jobs:
 
     - name: Commit all changed files back to the repository
       if: steps.Check_Releases.outputs.skip == 'false'
-      uses: stefanzweifel/git-auto-commit-action@v6
+      uses: stefanzweifel/git-auto-commit-action@v7
       with:
         commit_message: Auto-Commit (cache changes)
         repository: ${{ env.THIS_REPO_DIR }}
