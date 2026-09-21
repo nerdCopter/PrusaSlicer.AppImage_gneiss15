@@ -70,7 +70,7 @@ jobs:
 
     - name: Clone this repository
       if: steps.Check_Releases.outputs.skip == 'false'
-      uses: actions/checkout@v5
+      uses: actions/checkout@v7
       with:
         ref: ${{ github.head_ref }}
         path: '${{ env.THIS_REPO_DIR }}'
@@ -89,7 +89,7 @@ jobs:
 
     - name: Clone the PrusaSlicer repository
       if: steps.Check_Releases.outputs.skip == 'false'
-      uses: actions/checkout@v5
+      uses: actions/checkout@v7
       with:
         repository: prusa3d/PrusaSlicer
         ref: '${{ steps.Check_Releases.outputs.VERSION }}'

@@ -43,7 +43,7 @@ jobs:
         done
     
     - name: Clone this repository
-      uses: actions/checkout@v5
+      uses: actions/checkout@v7
       with:
         ref: main
         path: '${{ env.THIS_REPO_DIR }}'
@@ -59,7 +59,7 @@ jobs:
         repository: ${{ env.THIS_REPO_DIR }}
 
     - name: Clone the PrusaSlicer repository
-      uses: actions/checkout@v5
+      uses: actions/checkout@v7
       with:
         repository: prusa3d/PrusaSlicer
         ref: '${{ env.PRUSA_VERSION }}'
@@ -93,7 +93,7 @@ jobs:
 
     - name: Send success mail
       if: success()
-      uses: dawidd6/action-send-mail@v6
+      uses: dawidd6/action-send-mail@v18
       with:
         server_address: smtp.web.de
         server_port: 587
